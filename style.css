@@ -26,6 +26,9 @@ h1 {
   width: 450px;
 }
 
+/* End Utilities */
+
+/* Wrong letters */
 .wrong-letters-container {
   position: absolute;
   top: 20px;
@@ -34,7 +37,15 @@ h1 {
   flex-direction: column;
   text-align: right;
 }
-/* End Utilities */
+
+.wrong-letters-container p {
+  margin: 0 0 5px;
+}
+
+.wrong-letters-container span {
+  font-size: 24px;
+}
+/* End Wrong letters */
 
 /* SVG Style */
 .figure-container {
