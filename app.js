@@ -50,7 +50,10 @@ function displayWord() {
 
 // Update the wrong letter array
 function updateWrongLettersEl() {
-  console.log("Update Wrong");
+  wrongLettersEl.innerHTML = `
+  ${wrongLetters.length > 0 ? "<p>Wrong!</p>" : ""}
+  ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+  `;
 }
 
 // Show the notification
