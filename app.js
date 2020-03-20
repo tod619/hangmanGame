@@ -17,3 +17,7 @@ const words = [
   "morning",
   "computer"
 ];
+
+let selectedWord = words[Math.floor(Math.random() * words.length)];
+
+console.log(selectedWord);
