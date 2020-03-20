@@ -66,6 +66,12 @@ function updateWrongLettersEl() {
       part.style.display = "none";
     }
   });
+
+  //   Check if game is lost
+  if (wrongLetters.length === figureParts.length) {
+    finalMessage.innerText = "Unfortunatley You Lost!";
+    popup.style.display = "flex";
+  }
 }
 
 // Show the notification
