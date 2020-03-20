@@ -7,3 +7,13 @@ const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
 
 const figureParts = document.querySelectorAll(".figure-part");
+
+const words = [
+  "application",
+  "programming",
+  "interface",
+  "wizard",
+  "spice",
+  "morning",
+  "computer"
+];
