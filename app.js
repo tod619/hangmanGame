@@ -20,4 +20,25 @@ const words = [
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-console.log(selectedWord);
+const correctLetters = [];
+const wrongLetters = [];
+
+// Functions
+// Display word function
+function displayWord() {
+  wordEl.innerHTML = `
+    ${selectedWord
+      .split("")
+      .map(
+        letter => `
+        <span class = "letter">
+            ${correctLetters.includes(letter) ? letter : ""}
+        </span>
+        `
+      )
+      .join("")}
+
+    `;
+}
+
+displayWord();
