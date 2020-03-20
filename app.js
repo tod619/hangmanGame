@@ -55,7 +55,11 @@ function updateWrongLettersEl() {
 
 // Show the notification
 function showNotification() {
-  console.log("Notification");
+  notification.classList.add("show");
+
+  setTimeout(() => {
+    notification.classList.remove("show");
+  }, 2000);
 }
 
 // Keydown letter press
