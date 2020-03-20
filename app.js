@@ -50,10 +50,22 @@ function displayWord() {
 
 // Update the wrong letter array
 function updateWrongLettersEl() {
+  // Dispolay Wrong Letters
   wrongLettersEl.innerHTML = `
   ${wrongLetters.length > 0 ? "<p>Wrong!</p>" : ""}
   ${wrongLetters.map(letter => `<span>${letter}</span>`)}
   `;
+
+  //   Display figure Parts
+  figureParts.forEach((part, index) => {
+    const errors = wrongLetters.length;
+
+    if (index < errors) {
+      part.style.display = "block";
+    } else {
+      part.style.display = "none";
+    }
+  });
 }
 
 // Show the notification
