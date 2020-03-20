@@ -48,4 +48,39 @@ function displayWord() {
   }
 }
 
+// Update the wrong letter array
+function updateWrongLettersEl() {
+  console.log("Update Wrong");
+}
+
+// Show the notification
+function showNotification() {
+  console.log("Notification");
+}
+
+// Keydown letter press
+window.addEventListener("keydown", e => {
+  //   console.log(e.keyCode);
+  if (e.keyCode >= 65 && e.keyCode <= 90) {
+    const letter = e.key;
+
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        correctLetters.push(letter);
+        displayWord();
+      } else {
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
+
+        updateWrongLettersEl();
+      } else {
+        showNotification();
+      }
+    }
+  }
+});
+
 displayWord();
